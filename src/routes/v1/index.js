@@ -9,6 +9,12 @@ const AirportController = require("../../controllers/airport-controller")
 
 const router = express.Router()
 
+router.get("/srikanth", (req, res) => {
+    return res.status(200).json({
+        message: "Response by srikanth from FlightsAndSearchService"
+    })
+})
+
 router.post("/city", CityController.create)
 router.delete("/city/:id", CityController.destroy)
 router.get("/city/:id", CityController.get)
